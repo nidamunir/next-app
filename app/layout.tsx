@@ -19,6 +19,7 @@ export default function RootLayout({
   useEffect(() => {
     Hotjar.init(siteId, hotjarVersion);
     console.log("Hotjar initiated, hotjarVersion", hotjarVersion);
+    Hotjar.event("Page viewed");
   });
 
   return (
