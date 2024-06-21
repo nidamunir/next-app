@@ -22,6 +22,7 @@ export default function RootLayout({
     console.log("Hotjar initiated, hotjarVersion", hotjarVersion);
     Hotjar.event("Page viewed hotjar");
     Mouseflow.init("2c2b5e25-1639-4105-b4dd-64b73c25ce8d");
+    console.log("mouseflow initiated");
   });
 
   return (
