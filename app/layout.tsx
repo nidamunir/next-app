@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Hotjar from "@hotjar/browser";
 import { useEffect } from "react";
+import Mouseflow from "mouseflow";
 
 const siteId = 5024784;
 const hotjarVersion = 6;
@@ -19,7 +20,8 @@ export default function RootLayout({
   useEffect(() => {
     Hotjar.init(siteId, hotjarVersion);
     console.log("Hotjar initiated, hotjarVersion", hotjarVersion);
-    Hotjar.event("Page viewed");
+    Hotjar.event("Page viewed hotjar");
+    Mouseflow.init("2c2b5e25-1639-4105-b4dd-64b73c25ce8d");
   });
 
   return (
